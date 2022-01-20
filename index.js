@@ -1,5 +1,3 @@
-let inquirer = require('inquirer');
-let axios = require('axios');
 const pushToRepo = require("./utils/push_to_repo");
 const teamInquirer = require("./utils/team_inquirer");
 const starterInquirer = require("./utils/starter_inquirer");
