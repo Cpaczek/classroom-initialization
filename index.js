@@ -7,11 +7,10 @@ const createRepoName = require("./utils/create_repo_name");
 
 async function index() {
     let answers
-    answers = starterInquirer();
+    answers = await starterInquirer();
     let selected_teams;
     selected_teams = await teamInquirer(answers)
     let numbered_teams = await teamNumberInquirer(selected_teams.teams);
-    console.log(numbered_teams)
     for (let team of numbered_teams){
         let repo_name = createRepoName(answers.repo_name_template, team.team_number, team.team_section, answers.semester);
         console.log(repo_name)

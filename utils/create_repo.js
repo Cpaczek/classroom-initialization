@@ -33,5 +33,4 @@ module.exports = async function createRepo(repo_name, team_name, token, org) {
             'Authorization': `token ${token}`
         }
     });
-    console.log(repo)
 }
