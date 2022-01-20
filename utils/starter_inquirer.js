@@ -29,7 +29,7 @@ module.exports = async function starterInquirer(){
                 type: 'input',
                 name: 'repo_name_template',
                 message: 'Enter the name of the repository template',
-                default: 'csc648-%semester%-%section%-team%increment%',
+                default: 'csc648-%semester%-%section%-team%number%',
             },
 
         ]);
