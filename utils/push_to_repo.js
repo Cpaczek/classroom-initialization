@@ -15,7 +15,7 @@ module.exports = async function pushToRepo(user, pass, repo){
     await git.addRemote('origin', remote)
     await git.add('./*')
     await git.commit('Initial commit')
-    await git.push('origin', 'master', ['--force'])
+    await git.push('origin', 'master')
     fs.rmdir(dir + "/.git", { recursive: true }, (err) => {
         if (err) {
             throw err;
