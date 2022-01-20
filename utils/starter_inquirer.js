@@ -20,12 +20,6 @@ module.exports = async function starterInquirer(){
                 default: 'sp22'
             },
             {
-                type:'input',
-                name:'section',
-                message:'Enter the semester name:',
-                default: '01',
-            },
-            {
                 type: 'input',
                 name: "classroom_name",
                 message: 'Name of Github Classroom Org:',
@@ -36,12 +30,6 @@ module.exports = async function starterInquirer(){
                 name: 'repo_name_template',
                 message: 'Enter the name of the repository template',
                 default: 'csc648-%semester%-%section%-team%increment%',
-            },
-            {
-                type: 'input',
-                name: 'template_repo',
-                message: 'Enter the name of the repository template',
-                default: 'csc648-%semester%-%section%-team%number%',
             },
 
         ]);
