@@ -22,7 +22,7 @@ module.exports = async function createRepo(repo_name, team_name, token, org) {
     }
     if(team_id === null){
         console.log(`Team ${team_name} not found`)
-        return
+        throw new Error(`Team ${team_name} not found`)
     }
     let repo = await axios.post(`https://api.github.com/orgs/${org}/repos`, {
         name: repo_name,
