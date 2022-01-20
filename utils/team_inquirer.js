@@ -3,6 +3,7 @@ const inquirer = require("inquirer");
 module.exports = async function teamInquirer(answers){
     let selected_teams;
     let teams
+    // get teams
     try{
         teams = await axios.get(`https://api.github.com/orgs/${answers.classroom_name}/teams`,{
             headers: {
