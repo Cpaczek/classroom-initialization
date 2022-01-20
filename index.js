@@ -9,15 +9,7 @@ const createRepoName = require("./utils/create_repo_name");
 
 async function index() {
     let answers
-    // answers = starterInquirer();
-    answers = {
-        token: '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',
-        semester: 'sp22',
-        username: 'cpaczek',
-        section: '01',
-        classroom_name: 'CSC-648-SFSU',
-        repo_name_template: 'csc648-%semester%-%section%-team%number%'
-    }
+    answers = starterInquirer();
     let selected_teams;
     selected_teams = await teamInquirer(answers)
     let numbered_teams = await teamNumberInquirer(selected_teams.teams);
